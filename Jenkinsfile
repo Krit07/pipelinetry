@@ -1,11 +1,18 @@
-pipeline {
-    agent any
-
+pipeline{
+    
+    agent any 
+    
     stages {
-
-       stage('Git checkout'){
-            steps(
-                git branch: 'main', url: 'https://github.com/Krit07/pipelinetry.git'
-            )
+        
+        stage('Git Checkout'){
+            
+            steps{
+                
+                script{
+                    
+                    git branch: 'main', url: 'https://github.com/vikash-kumar01/mrdevops_javaapplication.git'
+                }
+            }
+        }
     }
 }
